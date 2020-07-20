@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'login',
     'spinfo',
+    'main',
 ]
 
 MIDDLEWARE = [
