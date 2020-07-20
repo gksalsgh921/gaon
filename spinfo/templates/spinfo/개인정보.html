@@ -1,0 +1,61 @@
+ <html>
+  <head> 
+  <title>개인정보입력</title>
+  <img src="/static/img/gaon.png" height="50" width="50" style="float:left;">
+   <h2>Ga+On</h2> 
+   <h2 align="center">개인 정보</h2>
+      <hr>     
+  </head>
+<br><br>
+
+ <body>
+    <form method="post" action="./register">{% csrf_token %}
+    <table width="600" height="250" style=margin:auto; border="1" bordercolor="black" >
+        <tr>
+            <td bgcolor="#F6CED8" align="center">이름
+            </td>
+            <td>
+              <input type="text" name="my_name" size="10">
+            </td>
+          </tr>
+         <tr>
+         <td bgcolor="#F6CED8" align="center">아이디
+         </td>
+         <td>
+           <input type="text" name="my_id" size="10" minlength="4" maxlength="12">&nbsp;4~12자의 영문 대소문자와 숫자로만 입력<!-- minmax:{4,12} -->
+         </td>
+       </tr>
+       <tr>
+         <td bgcolor="#F6CED8" align="center">비밀번호
+         </td>
+         <td>
+           <input type="password" name="my_pw" size="10" minilength="4" maxlength="12">&nbsp;4~12자의 영문 대소문자와 숫자로만 입력<!-- minmax:{4,12} -->
+         </td>
+       </tr>
+       <tr>
+         <td bgcolor="#F6CED8" align="center">비밀번호 확인
+         </td>
+         <td>
+           <input type="password" name="my_pw_check" size="10" minlength="4" maxlength="12">
+     <span id="check"></span>
+         </td>
+       </tr>
+       <tr>
+         <td bgcolor="#F6CED8" align="center">메일주소
+         </td>
+         <td>
+           <input type="text" name="email" size="20">&nbsp;예 id@domain.com
+         </td>
+       </tr>
+    </form>
+    </table>
+       <br><br>
+        <center>
+
+            <input type="submit" value="다음 단계" >
+          
+        
+        </center>
+    
+    </body>
+    </html>

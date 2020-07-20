@@ -1,0 +1,81 @@
+<html>
+  <head>
+   <title>
+   회원 상세 정보 </title>
+   <img src="/static/img/gaon.png" height="50" width="50" style="float:left;">
+   <h2>Ga+On</h2> 
+   <h2 align="center">회원 상세 정보</h2>
+  
+   <hr>
+   <script src="/static/js/회원상세정보.js"></script>
+  </head>
+  <br><br>
+
+  <body>
+    <form method="post" action="./register_complete">{% csrf_token %}
+      <input type ="hidden" name =user_id  value={{put_id}} >
+    <table width="600" height="250" style=margin:auto; border="1" bordercolor="black" >
+      <tr>
+        <td bgcolor="#F6CED8" align="center"> 직업 </td>
+        <td><input type="text" name="job" size="20"  ></td>
+      </tr> 
+
+      <tr>
+        <td bgcolor="#F6CED8" align="center"> 출신학교 </td>
+        <td><input type="text" name="a_b" size="20" ></td>
+      </tr> 
+
+      <tr>
+        <td bgcolor="#F6CED8" align="center"> 거주지 </td>
+        <td><input type="text" name="home" size="20" ></td>
+      </tr> 
+
+      <tr>
+        <td bgcolor="#F6CED8" align="center"> 결혼/연애 상태 </td>
+        <td>
+            <input type="radio" name="marige" value="기혼">기혼
+            <input type="radio" name="marige" value="싱글">싱글
+            <input type="radio" name="marige" value="연애중">연애중
+        </td>
+      </tr> 
+
+      <tr>
+        <td bgcolor="#F6CED8" align="center"> 자기소개 </td>
+        <td>
+            <textarea name="self_intro" cols="20" rows="5" style="width:400px;"></textarea>
+        </td>
+
+      </tr> 
+      <tr>
+        <td bgcolor="#F6CED8" align="center"> 관심분야 </td>
+        <td>
+            <input type="checkbox" name="interest" value="엔터/도서/공연">엔터/도서/공연
+            <input type="checkbox" name="interest" value="스포츠">스포츠
+            <input type="checkbox" name="interest" value="자동차">자동차
+            <input type="checkbox" name="interest" value="테크/과학">테크/과학<br>
+            <input type="checkbox" name="interest" value="경제">경제
+            <input type="checkbox" name="interest" value="푸드">푸드
+            <input type="checkbox" name="interest" value="여행">여행 
+            <input type="checkbox" name="interest" value="건강">건강  
+            <input type="checkbox" name="interest" value="비즈니스">비즈니스 <br>
+            <input type="checkbox" name="interest" value="패션/뷰티">패션/뷰티
+            <input type="checkbox" name="interest" value="동식물">동식물
+            <input type="checkbox" name="interest" value="육아">육아
+            <input type="checkbox" name="interest" value="유머">유머
+            <input type="checkbox" name="interest" value="연애/결혼">연애/결혼
+        </td>
+      </tr> 
+   
+    </form>
+    </table>
+    <br><br>
+        <center>
+
+            <input type="submit" value="회원가입 완료" >
+            
+        
+        </center>
+    </body>
+  
+
+</html>
