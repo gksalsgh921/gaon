@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>메인화면</title>
+
+  </head>
+<frameset rows = "60,*" border="1" >
+    <frame src = "/static/template/기본 템플릿.html" scrolling="no">
+  <frameset cols = "300,700,400">
+    <frameset rows = "50%, *">
+    <frame src = "/static/template/친구목록.html"> 
+        <frame src = "/static/template/실시간온도순위.html" >
+        </frameset>
+        <frameset rows = "50, *">
+          <frame src = "/static/template/검색.html" scrolling="no">
+           <frame src = "/static/template/게시글.html">
+        </frameset>
+        <frameset rows = "180,150, *">
+            <frame src = "/static/template/내프로필.html" scrolling="no"> <!--스크롤바 없애기-->
+             <frame src = "/static/template/내관심분야.html" scrolling="no">
+                <frame src = "/static/template/알림.html">
+
+          </frameset>
+    </frameset>
+</frameset>
+
+  </html>
